@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineGlass — Movie Showcase</title>
+  <meta name="description" content="Discover Movies in a Futuristic Glass Experience. Explore curated films, genres, ratings, and highlights." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">◈</span>
+        <span>CineGlass</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#movies" class="nav-link">Movies</a></li>
+        <li><a href="#genres" class="nav-link">Genres</a></li>
+        <li><a href="#toprated" class="nav-link">Top Rated</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="scrollToSection('movies')">Explore Movies</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="aurora-bg">
+      <div class="aurora aurora-1"></div>
+      <div class="aurora aurora-2"></div>
+      <div class="aurora aurora-3"></div>
+      <div class="aurora aurora-4"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">✦ Now Showcasing 2024 Films</div>
+        <h1 class="hero-title">
+          Discover Movies in a
+          <span class="gradient-text">Futuristic Glass</span>
+          Experience
+        </h1>
+        <p class="hero-subtitle">
+          Explore curated films, genres, ratings, and highlights in a sleek cinematic showcase designed for true film enthusiasts.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="scrollToSection('movies')">
+            <span>Explore Movies</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button class="btn btn-ghost" onclick="scrollToSection('toprated')">
+            <span>⭐ Top Rated</span>
+          </button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>50+</strong><span>Films</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>8</strong><span>Genres</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>4K</strong><span>Quality</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="mockup-card featured-mockup">
+          <div class="mockup-poster gradient-poster-1">
+            <div class="poster-overlay">
+              <div class="poster-badge">NEW</div>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <div class="mockup-meta">
+              <span class="mockup-genre">Sci-Fi</span>
+              <span class="mockup-year">2024</span>
+            </div>
+            <h3 class="mockup-title">Stellar Horizon</h3>
+            <div class="mockup-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-val">9.2</span>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-card side-mockup sm-card">
+          <div class="mockup-poster gradient-poster-2"></div>
+          <div class="mockup-info">
+            <span class="mockup-genre">Thriller</span>
+            <h3 class="mockup-title">Dark Frequency</h3>
+            <span class="rating-val">8.7</span>
+          </div>
+        </div>
+        <div class="mockup-card side-mockup sm-card-2">
+          <div class="mockup-poster gradient-poster-3"></div>
+          <div class="mockup-info">
+            <span class="mockup-genre">Drama</span>
+            <h3 class="mockup-title">Echoes of Silence</h3>
+            <span class="rating-val">8.9</span>
+          </div>
+        </div>
+        <div class="floating-tag tag-1">🎬 Now Trending</div>
+        <div class="floating-tag tag-2">⭐ 9.2 Rating</div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== MOVIES SECTION ===== -->
+  <section class="section movies-section" id="movies">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">◈ Film Collection</div>
+        <h2 class="section-title">Featured <span class="gradient-text">Movies</span></h2>
+        <p class="section-subtitle">Hand-picked cinematic masterpieces across every genre.</p>
+      </div>
+
+      <!-- GENRE FILTER -->
+      <div class="genre-filters" id="genres">
+        <button class="filter-btn active" data-genre="all">All</button>
+        <button class="filter-btn" data-genre="Action">Action</button>
+        <button class="filter-btn" data-genre="Sci-Fi">Sci-Fi</button>
+        <button class="filter-btn" data-genre="Drama">Drama</button>
+        <button class="filter-btn" data-genre="Animation">Animation</button>
+        <button class="filter-btn" data-genre="Thriller">Thriller</button>
+      </div>
+
+      <!-- MOVIES GRID -->
+      <div class="movies-grid" id="moviesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== TOP RATED SECTION ===== -->
+  <section class="section toprated-section" id="toprated">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">⭐ Best of the Best</div>
+        <h2 class="section-title">Top <span class="gradient-text">Rated</span></h2>
+        <p class="section-subtitle">The highest-rated films in our curated collection.</p>
+      </div>
+      <div class="toprated-grid" id="topratedGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="section-badge">✉ Get in Touch</div>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="section-subtitle">Have a suggestion for a film to add? Want to collaborate? Drop us a message.</p>
+          <div class="contact-features">
+            <div class="contact-feature">
+              <span class="cf-icon">🎬</span>
+              <span>Film recommendations welcome</span>
+            </div>
+            <div class="contact-feature">
+              <span class="cf-icon">🤝</span>
+              <span>Open for collaborations</span>
+            </div>
+            <div class="contact-feature">
+              <span class="cf-icon">💡</span>
+              <span>Feedback always appreciated</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Alex Rivera" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Share your thoughts, suggestions, or feedback..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">✓</div>
+            <h3>Message Received!</h3>
+            <p>Thank you! Your message has been received. We'll get back to you soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-aurora"></div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-icon">◈</span>
+            <span>CineGlass</span>
+          </a>
+          <p>A futuristic cinematic showcase built with pure HTML, CSS, and JavaScript. No frameworks, no backends — just glass and light.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#toprated">Top Rated</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 <strong>CineGlass</strong>. Crafted with 💙 · No databases · No API keys · GitHub safe</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal-glass" id="modalContent">
+      <button class="modal-close" onclick="closeModalDirect()" aria-label="Close modal">✕</button>
+      <div class="modal-poster" id="modalPoster"></div>
+      <div class="modal-body">
+        <div class="modal-tags" id="modalTags"></div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-meta" id="modalMeta"></div>
+        <p class="modal-synopsis" id="modalSynopsis"></p>
+        <div class="modal-details" id="modalDetails"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToSection('home')" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
