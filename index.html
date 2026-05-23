@@ -7,7 +7,7 @@
   <meta name="description" content="A curated Marvel film showcase by Haikal Alghiffari." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,7 +15,7 @@
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#home" class="nav-logo">CineGlass</a>
+      <a href="#home" class="nav-logo">Cine<span>Glass</span></a>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#movies" class="nav-link">Movies</a></li>
@@ -35,6 +35,13 @@
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <div class="blob blob-3"></div>
+      <!-- Aqua decorative siluet shapes -->
+      <div class="aqua-shape aqua-shape-1"></div>
+      <div class="aqua-shape aqua-shape-2"></div>
+      <div class="aqua-shape aqua-shape-3"></div>
+      <span class="aqua-cross aqua-cross-1">✦</span>
+      <span class="aqua-cross aqua-cross-2">✦</span>
+      <span class="aqua-cross aqua-cross-3">✦</span>
     </div>
     <div class="hero-inner">
       <div class="hero-text">
@@ -72,6 +79,7 @@
       <div class="section-head">
         <span class="label">Collection</span>
         <h2>All Films</h2>
+        <span class="aqua-line"></span>
       </div>
       <div class="filter-bar">
         <button class="filter-btn active" data-genre="all">All</button>
@@ -91,6 +99,7 @@
       <div class="section-head">
         <span class="label">Best of the Best</span>
         <h2>Top Rated</h2>
+        <span class="aqua-line"></span>
       </div>
       <div class="toprated-list" id="topratedList"></div>
     </div>
