@@ -28,7 +28,7 @@ const movies = [
     director: "Anthony & Joe Russo",
     description: "Thanos berusaha mengumpulkan enam Infinity Stones untuk menghapus setengah populasi alam semesta. Para superhero Marvel bersatu.",
     synopsis: "Thanos berusaha mengumpulkan enam Infinity Stones untuk mendapatkan kekuatan tak terbatas dan menghapus setengah populasi alam semesta. Para superhero Marvel bersatu dalam pertarungan terbesar yang pernah terjadi untuk menghentikan rencananya.",
-    poster: "images/infinity-war.jpg",
+    poster: "images/infinity-war.webp",
     posterGradient: "linear-gradient(160deg, #0d1a2e 0%, #1a3050 40%, #0e4a6b 70%, #1a1a3e 100%)"
   },
   {
@@ -54,7 +54,7 @@ const movies = [
     director: "James Gunn",
     description: "Peter Quill bersama Rocket, Groot, Gamora, dan Drax melindungi artefak berbahaya yang dapat menghancurkan galaksi.",
     synopsis: "Peter Quill bersama Rocket, Groot, Gamora, dan Drax harus bekerja sama untuk melindungi sebuah artefak berbahaya yang dapat menghancurkan galaksi. Film ini terkenal karena humornya yang segar dan soundtrack musik klasik yang ikonik.",
-    poster: "images/gotg.jpg",
+    poster: "images/gotg.webp",
     posterGradient: "linear-gradient(160deg, #1a0a2e 0%, #3d1060 40%, #5a0a7a 70%, #8a1a40 100%)"
   },
   {
@@ -67,7 +67,7 @@ const movies = [
     director: "James Gunn",
     description: "Para Guardians menghadapi ancaman baru sambil berusaha menyelamatkan Rocket Raccoon dan mengungkap masa lalunya yang tragis.",
     synopsis: "Para Guardians menghadapi ancaman baru sambil berusaha menyelamatkan Rocket Raccoon. Film ini mengungkap masa lalu Rocket yang tragis dan menghadirkan perpaduan antara aksi, humor, dan emosi yang sangat kuat.",
-    poster: "images/gotg3.jpg",
+    poster: "images/gotg3.webp",
     posterGradient: "linear-gradient(160deg, #0a1a3e 0%, #1a4a6b 40%, #0e6a5a 70%, #1a3a2e 100%)"
   },
   {
@@ -80,7 +80,7 @@ const movies = [
     director: "Taika Waititi",
     description: "Thor kehilangan Mjolnir dan bertarung di arena gladiator melawan Hulk, sementara harus menghentikan Hela yang ingin menghancurkan Asgard.",
     synopsis: "Thor kehilangan palu Mjolnir dan harus bertarung di arena gladiator luar angkasa melawan Hulk. Sementara itu, ia harus menghentikan Hela yang ingin menghancurkan Asgard. Film ini dikenal sebagai salah satu film Marvel terlucu dan paling menghibur.",
-    poster: "images/ragnarok.jpg",
+    poster: "images/ragnarok.webp",
     posterGradient: "linear-gradient(160deg, #1a0a0a 0%, #4a1a0a 40%, #8a3010 70%, #6a1a3a 100%)"
   },
   {
@@ -93,7 +93,7 @@ const movies = [
     director: "Jon Favreau",
     description: "Tony Stark, miliarder jenius pembuat senjata, menciptakan baju zirah berteknologi tinggi yang menjadi identitas superhero Iron Man.",
     synopsis: "Tony Stark, seorang miliarder jenius pembuat senjata, diculik oleh kelompok teroris. Untuk melarikan diri, ia menciptakan baju zirah berteknologi tinggi yang kemudian menjadi identitas superhero Iron Man. Film ini merupakan awal dari Marvel Cinematic Universe.",
-    poster: "images/iron-man.jpg",
+    poster: "images/iron-man.webp",
     posterGradient: "linear-gradient(160deg, #1a0a0a 0%, #5a1a0a 40%, #c04a10 70%, #8a2010 100%)"
   },
   {
@@ -106,7 +106,7 @@ const movies = [
     director: "Anthony & Joe Russo",
     description: "Perbedaan pendapat soal pengawasan superhero menyebabkan perpecahan besar. Iron Man dan Captain America memimpin dua kubu yang berhadapan.",
     synopsis: "Perbedaan pendapat mengenai pengawasan pemerintah terhadap para superhero menyebabkan perpecahan besar di antara Avengers. Iron Man dan Captain America memimpin dua kubu yang saling berhadapan.",
-    poster: "images/civil-war.jpg",
+    poster: "images/civil-war.webp",
     posterGradient: "linear-gradient(160deg, #0a0a1a 0%, #1a1a4a 40%, #0a2a6a 70%, #4a0a1a 100%)"
   },
   {
