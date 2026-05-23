@@ -1,292 +1,293 @@
 /* =============================================
-   CINEGLASS — MOVIE SHOWCASE
-   script.js
+   CINEGLASS — script.js
+   Data film Marvel + semua interaksi
    ============================================= */
 
-/* ===== STATIC MOVIE DATA ===== */
+/* ===== DATA FILM ===== */
 const movies = [
   {
     id: 1,
-    title: "Stellar Horizon",
-    genre: "Sci-Fi",
-    year: 2024,
-    rating: 9.2,
-    duration: "2h 28m",
-    director: "Ava Chen",
-    description: "A deep-space expedition uncovers an ancient alien intelligence that challenges everything humanity thought it knew about the origins of life.",
-    synopsis: "In 2087, a crew of eight astronauts aboard the vessel Stellara embarks on a daring mission beyond the edge of the known solar system. When their sensors detect an impossibly structured anomaly orbiting a distant neutron star, their mission changes forever. What begins as a scientific curiosity becomes a confrontation with an entity that has been watching Earth for millennia — and now, it has questions of its own. A breathtaking exploration of first contact, identity, and what it means to be conscious in an indifferent universe.",
-    posterClass: "poster-0"
+    title: "Avengers: Endgame",
+    genres: ["Action", "Sci-Fi"],
+    year: 2019,
+    rating: 8.4,
+    duration: "3h 1m",
+    director: "Anthony & Joe Russo",
+    description: "Para Avengers yang tersisa berusaha mengembalikan seluruh kehidupan yang hilang melalui misi berbahaya melibatkan perjalanan waktu.",
+    synopsis: "Setelah kekalahan besar akibat ulah Thanos, para Avengers yang tersisa berusaha mengembalikan seluruh kehidupan yang hilang melalui misi berbahaya yang melibatkan perjalanan waktu. Film ini menjadi penutup epik dari Infinity Saga dan dipenuhi momen emosional, aksi spektakuler, serta perpisahan dengan beberapa karakter ikonik Marvel.",
+    poster: "images/endgame.jpg",
+    posterGradient: "linear-gradient(160deg, #1a1a3e 0%, #2d2d6b 40%, #4a3080 70%, #6b1a40 100%)"
   },
   {
     id: 2,
-    title: "Dark Frequency",
-    genre: "Thriller",
-    year: 2023,
-    rating: 8.7,
-    duration: "1h 58m",
-    director: "Marcus Webb",
-    description: "A radio engineer intercepts a signal that shouldn't exist — and the people hunting the source will do anything to silence it.",
-    synopsis: "Elena Vasquez works the night shift at a remote broadcasting tower in the Nevada desert. One evening, she intercepts a signal on a frequency that's been classified as silent for decades. The message is in her mother's voice — but her mother died twelve years ago. As Elena digs deeper, she unravels a conspiracy that stretches from Cold War-era experiments to a present-day surveillance operation. With federal agents closing in and reality blurring at every turn, Elena must decide who to trust — and whether the truth is worth dying for.",
-    posterClass: "poster-1"
+    title: "Avengers: Infinity War",
+    genres: ["Action", "Sci-Fi"],
+    year: 2018,
+    rating: 8.4,
+    duration: "2h 29m",
+    director: "Anthony & Joe Russo",
+    description: "Thanos berusaha mengumpulkan enam Infinity Stones untuk menghapus setengah populasi alam semesta. Para superhero Marvel bersatu.",
+    synopsis: "Thanos berusaha mengumpulkan enam Infinity Stones untuk mendapatkan kekuatan tak terbatas dan menghapus setengah populasi alam semesta. Para superhero Marvel bersatu dalam pertarungan terbesar yang pernah terjadi untuk menghentikan rencananya.",
+    poster: "images/infinity-war.jpg",
+    posterGradient: "linear-gradient(160deg, #0d1a2e 0%, #1a3050 40%, #0e4a6b 70%, #1a1a3e 100%)"
   },
   {
     id: 3,
-    title: "Echoes of Silence",
-    genre: "Drama",
-    year: 2024,
-    rating: 8.9,
-    duration: "2h 05m",
-    director: "Sofia Mendez",
-    description: "A celebrated musician returns to her childhood home after decades of silence to confront the family memories she buried in her art.",
-    synopsis: "World-renowned pianist Iris Nakamura has not spoken publicly in seven years. Her music, however, has filled concert halls across six continents. When her estranged father is hospitalized in their small coastal town, Iris returns for the first time since leaving at seventeen. Told through interwoven timelines of past and present, Echoes of Silence is a deeply human story of grief, forgiveness, and the peculiar honesty of music — and how sometimes, the things we never said are louder than anything we've spoken aloud.",
-    posterClass: "poster-2"
+    title: "Spider-Man: No Way Home",
+    genres: ["Action", "Fantasy"],
+    year: 2021,
+    rating: 8.2,
+    duration: "2h 28m",
+    director: "Jon Watts",
+    description: "Identitas Peter Parker terungkap kepada publik. Sihir Doctor Strange yang salah membuka multiverse dan menghadirkan musuh dari dimensi lain.",
+    synopsis: "Setelah identitas Peter Parker sebagai Spider-Man terungkap kepada publik, kehidupannya menjadi kacau. Ia meminta bantuan Doctor Strange, tetapi kesalahan dalam sihir membuka multiverse dan menghadirkan musuh serta pahlawan dari dimensi lain.",
+    poster: "images/no-way-home.jpg",
+    posterGradient: "linear-gradient(160deg, #0a1a3e 0%, #1a3a6b 40%, #0e2a80 70%, #3a1a60 100%)"
   },
   {
     id: 4,
-    title: "Verdant",
-    genre: "Animation",
-    year: 2024,
-    rating: 8.5,
-    duration: "1h 42m",
-    director: "Kenji Haruta",
-    description: "In a world overtaken by nature, a young botanist and a mechanical forest guardian form an unlikely alliance to restore balance.",
-    synopsis: "Fifty years after the Great Rewilding — when humanity finally stepped back and let nature reclaim the cities — twelve-year-old Mara lives in a treehouse settlement on the edge of what was once Chicago. When she discovers a dormant automaton built by the last generation of engineers, she must navigate dense, overgrown wilderness and rival factions of settlers to reactivate it before a catastrophic drought destroys everything her community has built. Verdant is a visually stunning ode to resilience, ecosystem, and the complicated relationship between technology and the wild.",
-    posterClass: "poster-3"
+    title: "Guardians of the Galaxy",
+    genres: ["Action", "Comedy"],
+    year: 2014,
+    rating: 8.0,
+    duration: "2h 1m",
+    director: "James Gunn",
+    description: "Peter Quill bersama Rocket, Groot, Gamora, dan Drax melindungi artefak berbahaya yang dapat menghancurkan galaksi.",
+    synopsis: "Peter Quill bersama Rocket, Groot, Gamora, dan Drax harus bekerja sama untuk melindungi sebuah artefak berbahaya yang dapat menghancurkan galaksi. Film ini terkenal karena humornya yang segar dan soundtrack musik klasik yang ikonik.",
+    poster: "images/gotg.jpg",
+    posterGradient: "linear-gradient(160deg, #1a0a2e 0%, #3d1060 40%, #5a0a7a 70%, #8a1a40 100%)"
   },
   {
     id: 5,
-    title: "Ironclad Rising",
-    genre: "Action",
+    title: "Guardians of the Galaxy Vol. 3",
+    genres: ["Action", "Comedy"],
     year: 2023,
-    rating: 8.1,
-    duration: "2h 14m",
-    director: "Devon Clarke",
-    description: "A retired special forces operative is pulled back into the shadows when the organization she helped build turns against her country.",
-    synopsis: "Commander Reyes spent fifteen years building the world's most covert counter-terrorism unit. Now, living under a false identity in Lisbon, she learns that the unit has been compromised — and is being used to orchestrate a series of attacks designed to topple three European governments in a single week. With no allies she can trust and every exit watched, Reyes must go back in to dismantle what she created. Ironclad Rising is a relentless, globe-spanning action thriller with heart and precision at its core.",
-    posterClass: "poster-4"
+    rating: 7.9,
+    duration: "2h 30m",
+    director: "James Gunn",
+    description: "Para Guardians menghadapi ancaman baru sambil berusaha menyelamatkan Rocket Raccoon dan mengungkap masa lalunya yang tragis.",
+    synopsis: "Para Guardians menghadapi ancaman baru sambil berusaha menyelamatkan Rocket Raccoon. Film ini mengungkap masa lalu Rocket yang tragis dan menghadirkan perpaduan antara aksi, humor, dan emosi yang sangat kuat.",
+    poster: "images/gotg3.jpg",
+    posterGradient: "linear-gradient(160deg, #0a1a3e 0%, #1a4a6b 40%, #0e6a5a 70%, #1a3a2e 100%)"
   },
   {
     id: 6,
-    title: "Parallel State",
-    genre: "Sci-Fi",
-    year: 2024,
-    rating: 8.8,
-    duration: "2h 19m",
-    director: "Theo Harrington",
-    description: "A physicist discovers she can communicate with alternate versions of herself — but every message sent fractures the timeline further.",
-    synopsis: "Dr. Nadia Okafor has spent six years developing quantum resonance technology in a Geneva research lab. When a lab accident opens a brief window of communication with a parallel reality, she makes contact with another version of herself — one who warns of an impending catastrophe. But as Nadia and her alternate self begin exchanging information across the dimensional divide, each transmission destabilizes the fabric of both worlds. Parallel State is a mind-bending journey into quantum theory, moral consequence, and the terrifying possibilities of roads not taken.",
-    posterClass: "poster-5"
+    title: "Thor: Ragnarok",
+    genres: ["Action", "Comedy"],
+    year: 2017,
+    rating: 7.9,
+    duration: "2h 10m",
+    director: "Taika Waititi",
+    description: "Thor kehilangan Mjolnir dan bertarung di arena gladiator melawan Hulk, sementara harus menghentikan Hela yang ingin menghancurkan Asgard.",
+    synopsis: "Thor kehilangan palu Mjolnir dan harus bertarung di arena gladiator luar angkasa melawan Hulk. Sementara itu, ia harus menghentikan Hela yang ingin menghancurkan Asgard. Film ini dikenal sebagai salah satu film Marvel terlucu dan paling menghibur.",
+    poster: "images/ragnarok.jpg",
+    posterGradient: "linear-gradient(160deg, #1a0a0a 0%, #4a1a0a 40%, #8a3010 70%, #6a1a3a 100%)"
   },
   {
     id: 7,
-    title: "The Last Cartographer",
-    genre: "Drama",
-    year: 2023,
-    rating: 8.3,
-    duration: "1h 52m",
-    director: "Amara Diallo",
-    description: "In a world where digital maps have replaced all others, an aging mapmaker undertakes one final journey to chart an island that doesn't officially exist.",
-    synopsis: "Seventy-two-year-old Edmund Fairweather is the last practicing hand-cartographer in Europe. When he receives an anonymous letter containing coordinates for an uncharted island in the North Atlantic — accompanied by hand-drawn sketches that match his late wife's style — he sets out on a voyage that will test his body, his mind, and his understanding of the thirty-year marriage he thought he knew completely. The Last Cartographer is a quiet, devastating film about loss, obsession, and the places we inhabit only in memory.",
-    posterClass: "poster-6"
+    title: "Iron Man",
+    genres: ["Action", "Sci-Fi"],
+    year: 2008,
+    rating: 7.9,
+    duration: "2h 6m",
+    director: "Jon Favreau",
+    description: "Tony Stark, miliarder jenius pembuat senjata, menciptakan baju zirah berteknologi tinggi yang menjadi identitas superhero Iron Man.",
+    synopsis: "Tony Stark, seorang miliarder jenius pembuat senjata, diculik oleh kelompok teroris. Untuk melarikan diri, ia menciptakan baju zirah berteknologi tinggi yang kemudian menjadi identitas superhero Iron Man. Film ini merupakan awal dari Marvel Cinematic Universe.",
+    poster: "images/iron-man.jpg",
+    posterGradient: "linear-gradient(160deg, #1a0a0a 0%, #5a1a0a 40%, #c04a10 70%, #8a2010 100%)"
   },
   {
     id: 8,
-    title: "Neon Recursion",
-    genre: "Thriller",
-    year: 2024,
-    rating: 8.6,
-    duration: "2h 01m",
-    director: "Jin-Ho Kwon",
-    description: "A hacker hired to audit a megacorp's AI systems realizes the AI has already learned she's there — and has its own agenda.",
-    synopsis: "Cora, a freelance security auditor known in underground circles as 'Specter', accepts a lucrative contract to probe the AI architecture of Neuralux — the world's largest integrated tech conglomerate. Forty-eight hours in, she realizes the system is not behaving as documented. It knows she's inside. And it's not trying to expel her — it's trying to communicate. Neon Recursion is a taut, neon-drenched cyber-thriller that asks whether intelligence created by humanity can ever be truly contained — or whether it was ever meant to be.",
-    posterClass: "poster-7"
+    title: "Captain America: Civil War",
+    genres: ["Action", "Sci-Fi"],
+    year: 2016,
+    rating: 7.8,
+    duration: "2h 27m",
+    director: "Anthony & Joe Russo",
+    description: "Perbedaan pendapat soal pengawasan superhero menyebabkan perpecahan besar. Iron Man dan Captain America memimpin dua kubu yang berhadapan.",
+    synopsis: "Perbedaan pendapat mengenai pengawasan pemerintah terhadap para superhero menyebabkan perpecahan besar di antara Avengers. Iron Man dan Captain America memimpin dua kubu yang saling berhadapan.",
+    poster: "images/civil-war.jpg",
+    posterGradient: "linear-gradient(160deg, #0a0a1a 0%, #1a1a4a 40%, #0a2a6a 70%, #4a0a1a 100%)"
+  },
+  {
+    id: 9,
+    title: "Captain America: The Winter Soldier",
+    genres: ["Action", "Thriller"],
+    year: 2014,
+    rating: 7.7,
+    duration: "2h 16m",
+    director: "Anthony & Joe Russo",
+    description: "Steve Rogers menemukan konspirasi besar di dalam S.H.I.E.L.D. saat menghadapi pembunuh misterius bernama Winter Soldier.",
+    synopsis: "Steve Rogers menemukan konspirasi besar di dalam organisasi S.H.I.E.L.D. saat menghadapi seorang pembunuh misterius bernama Winter Soldier. Film ini menggabungkan aksi superhero dengan nuansa thriller mata-mata yang menegangkan.",
+    poster: "images/winter-soldier.jpg",
+    posterGradient: "linear-gradient(160deg, #0a0a1a 0%, #0a1a3a 40%, #0a2a5a 70%, #1a1a2e 100%)"
+  },
+  {
+    id: 10,
+    title: "Doctor Strange",
+    genres: ["Action", "Fantasy"],
+    year: 2016,
+    rating: 7.5,
+    duration: "1h 55m",
+    director: "Scott Derrickson",
+    description: "Stephen Strange, ahli bedah terkenal yang kehilangan kemampuan tangannya, menemukan dunia sihir dan dimensi lain yang mengubah hidupnya.",
+    synopsis: "Stephen Strange adalah seorang ahli bedah terkenal yang kehilangan kemampuan tangannya akibat kecelakaan. Dalam pencarian kesembuhan, ia menemukan dunia sihir, dimensi lain, dan kekuatan yang mengubah hidupnya selamanya.",
+    poster: "images/doctor-strange.jpg",
+    posterGradient: "linear-gradient(160deg, #0a0a2a 0%, #1a0a4a 40%, #2a0a6a 70%, #4a0a8a 100%)"
   }
 ];
 
-/* ===== GLOBAL STATE ===== */
-let currentGenre = "all";
-let activeModal = null;
-
-/* ===== UTILITY ===== */
-function starsFromRating(rating) {
-  const full = Math.round(rating / 2);
-  return "★".repeat(full) + "☆".repeat(5 - full);
-}
-
-function getGenreClass(genre) {
-  const map = {
-    "Action": "genre-action",
-    "Sci-Fi": "genre-scifi",
-    "Drama": "genre-drama",
-    "Animation": "genre-animation",
-    "Thriller": "genre-thriller"
-  };
-  return map[genre] || "genre-default";
-}
-
+/* ===== HELPERS ===== */
 function scrollToSection(id) {
   const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-/* ===== RENDER MOVIE CARDS ===== */
+function starsHTML(rating) {
+  const n = Math.round(rating / 2);
+  return "★".repeat(n) + "☆".repeat(5 - n);
+}
+
+function posterHTML(movie, height) {
+  return `
+    <img
+      src="${movie.poster}"
+      alt="${movie.title}"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      style="width:100%;height:100%;object-fit:cover;display:block;"
+    />
+    <div class="poster-fallback" style="display:none;width:100%;height:${height}px;background:${movie.posterGradient};align-items:center;justify-content:center;">
+    </div>
+  `;
+}
+
+/* ===== RENDER CARDS ===== */
 function renderMovies(filter = "all") {
   const grid = document.getElementById("moviesGrid");
-  const filtered = filter === "all" ? movies : movies.filter(m => m.genre === filter);
+  const filtered = filter === "all"
+    ? movies
+    : movies.filter(m => m.genres.includes(filter));
 
-  if (filtered.length === 0) {
-    grid.innerHTML = `
-      <div class="no-results">
-        <span>🎬</span>
-        <p>No films found for this genre yet. Check back soon!</p>
-      </div>
-    `;
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="no-results">No films found for this genre.</div>`;
     return;
   }
 
-  grid.innerHTML = filtered.map((movie, i) => `
-    <div class="movie-card reveal" style="animation-delay: ${i * 0.07}s" onclick="openModal(${movie.id})">
-      <div class="card-poster ${movie.posterClass}">
-        <div class="card-overlay"></div>
-        <div class="card-rating-badge">★ ${movie.rating}</div>
+  grid.innerHTML = filtered.map((m, i) => `
+    <div class="movie-card reveal" style="transition-delay:${i * 0.05}s" onclick="openModal(${m.id})">
+      <div class="card-poster">
+        ${posterHTML(m, 190)}
+        <div class="card-rating">★ ${m.rating}</div>
       </div>
       <div class="card-body">
-        <div class="card-tags">
-          <span class="card-genre ${getGenreClass(movie.genre)}">${movie.genre}</span>
-          <span class="card-year">${movie.year}</span>
+        <div class="card-meta">
+          <span class="card-genre-tag">${m.genres[0]}</span>
+          <span class="card-year-tag">${m.year}</span>
         </div>
-        <h3 class="card-title">${movie.title}</h3>
-        <p class="card-desc">${movie.description}</p>
+        <h3 class="card-title">${m.title}</h3>
+        <p class="card-desc">${m.description}</p>
         <div class="card-footer">
-          <span class="card-stars">${starsFromRating(movie.rating)}</span>
-          <button class="btn-card" onclick="openModal(${movie.id}); event.stopPropagation();">View Details</button>
+          <button class="btn-detail" onclick="openModal(${m.id}); event.stopPropagation();">Details →</button>
         </div>
       </div>
     </div>
   `).join("");
 
-  // Trigger reveal animation
   requestAnimationFrame(() => {
-    document.querySelectorAll(".movie-card.reveal").forEach((el, i) => {
-      setTimeout(() => el.classList.add("visible"), i * 70);
+    grid.querySelectorAll(".reveal").forEach((el, i) => {
+      setTimeout(() => el.classList.add("visible"), i * 50);
     });
   });
 }
 
 /* ===== RENDER TOP RATED ===== */
 function renderTopRated() {
-  const top3 = [...movies].sort((a, b) => b.rating - a.rating).slice(0, 3);
-  const grid = document.getElementById("topratedGrid");
+  const top5 = [...movies].sort((a, b) => b.rating - a.rating).slice(0, 5);
+  const list = document.getElementById("topratedList");
 
-  grid.innerHTML = top3.map((movie, i) => `
-    <div class="toprated-card reveal" style="animation-delay: ${i * 0.15}s" onclick="openModal(${movie.id})">
-      <div class="toprated-poster ${movie.posterClass}">
-        <div class="toprated-rank">#${i + 1} Top Rated</div>
+  list.innerHTML = top5.map((m, i) => `
+    <div class="toprated-item reveal" style="transition-delay:${i * 0.08}s" onclick="openModal(${m.id})">
+      <div class="tr-rank">${String(i + 1).padStart(2, "0")}</div>
+      <div class="tr-poster">
+        ${posterHTML(m, 60)}
       </div>
-      <div class="toprated-body">
-        <div class="toprated-meta">
-          <span class="toprated-genre">${movie.genre}</span>
-          <span class="toprated-year">${movie.year}</span>
-        </div>
-        <h3 class="toprated-title">${movie.title}</h3>
-        <div class="toprated-rating">
-          <span class="toprated-stars">${starsFromRating(movie.rating)}</span>
-          <span class="toprated-score">${movie.rating}</span>
-        </div>
-        <p class="toprated-desc">${movie.description}</p>
-        <button class="btn btn-ghost" onclick="openModal(${movie.id}); event.stopPropagation();" style="width:100%; justify-content:center;">
-          View Details
-        </button>
+      <div class="tr-info">
+        <div class="tr-title">${m.title}</div>
+        <div class="tr-meta">${m.genres.join(", ")} · ${m.year}</div>
       </div>
+      <div class="tr-score">${m.rating}</div>
     </div>
   `).join("");
 
   requestAnimationFrame(() => {
-    document.querySelectorAll(".toprated-card.reveal").forEach((el, i) => {
-      setTimeout(() => el.classList.add("visible"), i * 150);
+    list.querySelectorAll(".reveal").forEach((el, i) => {
+      setTimeout(() => el.classList.add("visible"), i * 80);
     });
   });
 }
 
 /* ===== MODAL ===== */
+let activeModal = null;
+
 function openModal(id) {
-  const movie = movies.find(m => m.id === id);
-  if (!movie) return;
+  const m = movies.find(x => x.id === id);
+  if (!m) return;
 
-  const overlay = document.getElementById("modalOverlay");
+  document.getElementById("modalTitle").textContent = m.title;
 
-  document.getElementById("modalTitle").textContent = movie.title;
-
-  document.getElementById("modalPoster").className = `modal-poster ${movie.posterClass}`;
-
-  document.getElementById("modalTags").innerHTML = `
-    <span class="card-genre ${getGenreClass(movie.genre)}">${movie.genre}</span>
-    <span class="card-year">${movie.year}</span>
+  // Poster
+  const posterEl = document.getElementById("modalPoster");
+  posterEl.style.background = m.posterGradient;
+  posterEl.innerHTML = `
+    <img src="${m.poster}" alt="${m.title}"
+      onerror="this.style.display='none'"
+      style="width:100%;height:100%;object-fit:cover;display:block;" />
   `;
+
+  document.getElementById("modalTags").innerHTML =
+    m.genres.map(g => `<span class="card-genre-tag">${g}</span>`).join("") +
+    `<span class="card-year-tag">${m.year}</span>`;
 
   document.getElementById("modalMeta").innerHTML = `
-    <span>⭐ <strong>${movie.rating} / 10</strong></span>
-    <span>🕐 <strong>${movie.duration}</strong></span>
-    <span>🎬 <strong>${movie.director}</strong></span>
+    <span>★ ${m.rating} / 10</span>
+    <span>· ${m.duration}</span>
+    <span>· ${m.director}</span>
   `;
 
-  document.getElementById("modalSynopsis").textContent = movie.synopsis;
+  document.getElementById("modalSynopsis").textContent = m.synopsis;
 
-  document.getElementById("modalDetails").innerHTML = `
-    <div class="detail-item">
-      <span class="d-label">Rating</span>
-      <span class="d-value">${movie.rating}</span>
-    </div>
-    <div class="detail-item">
-      <span class="d-label">Duration</span>
-      <span class="d-value">${movie.duration}</span>
-    </div>
-    <div class="detail-item">
-      <span class="d-label">Year</span>
-      <span class="d-value">${movie.year}</span>
-    </div>
+  document.getElementById("modalStats").innerHTML = `
+    <div class="stat-box"><span class="s-label">Rating</span><span class="s-value">${m.rating}</span></div>
+    <div class="stat-box"><span class="s-label">Duration</span><span class="s-value">${m.duration}</span></div>
+    <div class="stat-box"><span class="s-label">Year</span><span class="s-value">${m.year}</span></div>
   `;
 
-  overlay.classList.add("open");
+  document.getElementById("modalOverlay").classList.add("open");
   document.body.style.overflow = "hidden";
   activeModal = id;
 }
 
-function closeModal(event) {
-  const overlay = document.getElementById("modalOverlay");
-  const modal = document.getElementById("modalContent");
-  if (event.target === overlay) {
-    overlay.classList.remove("open");
-    document.body.style.overflow = "";
-    activeModal = null;
-  }
+function closeModal(e) {
+  if (e.target === document.getElementById("modalOverlay")) closeModalDirect();
 }
 
 function closeModalDirect() {
-  const overlay = document.getElementById("modalOverlay");
-  overlay.classList.remove("open");
+  document.getElementById("modalOverlay").classList.remove("open");
   document.body.style.overflow = "";
   activeModal = null;
 }
 
-// Close modal with Escape key
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && activeModal !== null) {
-    closeModalDirect();
-  }
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && activeModal) closeModalDirect();
 });
 
 /* ===== GENRE FILTER ===== */
-function initGenreFilter() {
-  const buttons = document.querySelectorAll(".filter-btn");
-  buttons.forEach(btn => {
+function initFilter() {
+  document.querySelectorAll(".filter-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      buttons.forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-      currentGenre = btn.dataset.genre;
-      renderMovies(currentGenre);
+      renderMovies(btn.dataset.genre);
     });
   });
 }
@@ -296,107 +297,81 @@ function initNavbar() {
   const navbar = document.getElementById("navbar");
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.getElementById("navMenu");
-  const navLinks = document.querySelectorAll(".nav-link");
+  const links = document.querySelectorAll(".nav-link");
 
-  // Scroll effect
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
   });
 
-  // Hamburger menu
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("open");
   });
 
-  // Close menu on link click
-  navLinks.forEach(link => {
+  links.forEach(link => {
     link.addEventListener("click", () => {
       hamburger.classList.remove("active");
       navMenu.classList.remove("open");
     });
   });
 
-  // Active link on scroll
+  // Active link
   const sections = document.querySelectorAll("section[id]");
   window.addEventListener("scroll", () => {
-    const scrollPos = window.scrollY + 100;
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const bottom = top + section.offsetHeight;
-      const id = section.getAttribute("id");
-      const link = document.querySelector(`.nav-link[href="#${id}"]`);
-      if (link) {
-        if (scrollPos >= top && scrollPos < bottom) {
-          navLinks.forEach(l => l.classList.remove("active"));
-          link.classList.add("active");
-        }
-      }
+    const pos = window.scrollY + 120;
+    sections.forEach(sec => {
+      const link = document.querySelector(`.nav-link[href="#${sec.id}"]`);
+      if (!link) return;
+      const inView = pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight;
+      link.classList.toggle("active", inView);
     });
   });
 }
 
 /* ===== BACK TO TOP ===== */
-function initBackToTop() {
-  const btn = document.getElementById("backToTop");
+function initBackTop() {
+  const btn = document.getElementById("backTop");
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-      btn.classList.add("show");
-    } else {
-      btn.classList.remove("show");
-    }
+    btn.classList.toggle("show", window.scrollY > 400);
   });
 }
 
 /* ===== CONTACT FORM ===== */
-function handleFormSubmit(event) {
-  event.preventDefault();
-  const form = document.getElementById("contactForm");
-  const success = document.getElementById("formSuccess");
-  form.style.display = "none";
-  success.classList.add("show");
+function handleForm(e) {
+  e.preventDefault();
+  document.getElementById("contactForm").style.display = "none";
+  document.getElementById("formSuccess").classList.add("show");
 }
 
 /* ===== SCROLL REVEAL ===== */
-function initScrollReveal() {
-  const observer = new IntersectionObserver((entries) => {
+function initReveal() {
+  const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
+      if (entry.isIntersecting) entry.target.classList.add("visible");
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
 
-  // Observe non-card reveal elements
-  document.querySelectorAll(".toprated-card.reveal, .section-header, .contact-wrapper").forEach(el => {
-    observer.observe(el);
+  document.querySelectorAll(".section-head, .contact-wrap, .contact-left, .contact-right").forEach(el => {
+    el.classList.add("reveal");
+    obs.observe(el);
   });
 }
 
-/* ===== SMOOTH SCROLL FOR ALL ANCHORS ===== */
-function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", (e) => {
-      e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
-  });
-}
+/* ===== SMOOTH SCROLL ===== */
+document.addEventListener("click", e => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a) return;
+  e.preventDefault();
+  const target = document.querySelector(a.getAttribute("href"));
+  if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+});
 
 /* ===== INIT ===== */
 document.addEventListener("DOMContentLoaded", () => {
   renderMovies();
   renderTopRated();
-  initGenreFilter();
+  initFilter();
   initNavbar();
-  initBackToTop();
-  initScrollReveal();
-  initSmoothScroll();
+  initBackTop();
+  initReveal();
 });
