@@ -15,7 +15,7 @@ const movies = [
     director: "Anthony & Joe Russo",
     description: "Para Avengers yang tersisa berusaha mengembalikan seluruh kehidupan yang hilang melalui misi berbahaya melibatkan perjalanan waktu.",
     synopsis: "Setelah kekalahan besar akibat ulah Thanos, para Avengers yang tersisa berusaha mengembalikan seluruh kehidupan yang hilang melalui misi berbahaya yang melibatkan perjalanan waktu. Film ini menjadi penutup epik dari Infinity Saga dan dipenuhi momen emosional, aksi spektakuler, serta perpisahan dengan beberapa karakter ikonik Marvel.",
-    poster: "images/endgame.jpg"
+    poster: "images/endgame.jpg",
     posterGradient: "linear-gradient(160deg, #1a1a3e 0%, #2d2d6b 40%, #4a3080 70%, #6b1a40 100%)"
   },
   {
