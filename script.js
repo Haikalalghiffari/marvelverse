@@ -21,7 +21,7 @@ const movies = [
   {
     id: 2,
     title: "Avengers: Infinity War",
-    genres: ["Action", "Sci-Fi"],
+    genres: ["Sci-Fi", "Action"],
     year: 2018,
     rating: 8.4,
     duration: "2h 29m",
@@ -34,7 +34,7 @@ const movies = [
   {
     id: 3,
     title: "Spider-Man: No Way Home",
-    genres: ["Action", "Fantasy"],
+    genres: ["Fantasy", "Action"],
     year: 2021,
     rating: 8.2,
     duration: "2h 28m",
@@ -47,7 +47,7 @@ const movies = [
   {
     id: 4,
     title: "Guardians of the Galaxy",
-    genres: ["Action", "Comedy"],
+    genres: ["Comedy", "Action"],
     year: 2014,
     rating: 8.0,
     duration: "2h 1m",
@@ -60,7 +60,7 @@ const movies = [
   {
     id: 5,
     title: "Guardians of the Galaxy Vol. 3",
-    genres: ["Action", "Comedy"],
+    genres: ["Comedy", "Action"],
     year: 2023,
     rating: 7.9,
     duration: "2h 30m",
@@ -73,7 +73,7 @@ const movies = [
   {
     id: 6,
     title: "Thor: Ragnarok",
-    genres: ["Action", "Comedy"],
+    genres: ["Comedy", "Action"],
     year: 2017,
     rating: 7.9,
     duration: "2h 10m",
@@ -86,7 +86,7 @@ const movies = [
   {
     id: 7,
     title: "Iron Man",
-    genres: ["Action", "Sci-Fi"],
+    genres: ["Sci-Fi", "Action"],
     year: 2008,
     rating: 7.9,
     duration: "2h 6m",
@@ -112,7 +112,7 @@ const movies = [
   {
     id: 9,
     title: "Captain America: The Winter Soldier",
-    genres: ["Action", "Thriller"],
+    genres: ["Thriller", "Action"],
     year: 2014,
     rating: 7.7,
     duration: "2h 16m",
@@ -125,7 +125,7 @@ const movies = [
   {
     id: 10,
     title: "Doctor Strange",
-    genres: ["Action", "Fantasy"],
+    genres: ["Fantasy", "Action"],
     year: 2016,
     rating: 7.5,
     duration: "1h 55m",
