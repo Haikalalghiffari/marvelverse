@@ -306,12 +306,14 @@ function initNavbar() {
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("open");
+    document.body.style.overflow = navMenu.classList.contains("open") ? "hidden" : "";
   });
 
   links.forEach(link => {
     link.addEventListener("click", () => {
       hamburger.classList.remove("active");
       navMenu.classList.remove("open");
+      document.body.style.overflow = "";
     });
   });
 
