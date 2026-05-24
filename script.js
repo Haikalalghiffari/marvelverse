@@ -153,6 +153,8 @@ function posterHTML(movie, height) {
     <img
       src="${movie.poster}"
       alt="${movie.title}"
+      loading="lazy"
+      decoding="async"
       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
       style="width:100%;height:100%;object-fit:cover;display:block;"
     />

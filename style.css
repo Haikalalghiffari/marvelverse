@@ -855,3 +855,23 @@ input, textarea { font-family: inherit; }
   .tr-poster { display:none; }
   .footer-inner { flex-direction:column; align-items:flex-start; gap:12px; }
 }
+
+/* ===== MOBILE PERFORMANCE ===== */
+@media (max-width: 768px) {
+  /* Kurangi blur di mobile — penyebab utama lag */
+  :root {
+    --blur: blur(8px);
+    --blur-heavy: blur(12px);
+    --blur-light: blur(4px);
+  }
+  /* Matikan animasi hover di mobile */
+  .movie-card:hover,
+  .toprated-item:hover,
+  .contact-link:hover { transform: none; }
+  /* Shadow lebih ringan */
+  .movie-card { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  /* Sembunyikan elemen dekoratif yang berat */
+  .blob { display: none; }
+  .aqua-shape { display: none; }
+  .aqua-cross { display: none; }
+}
