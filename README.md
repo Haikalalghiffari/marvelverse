@@ -3,7 +3,7 @@
 > A curated Marvel Cinematic Universe film showcase built with pure HTML, CSS, and JavaScript.
 > Designed by Haikal Alghiffari Sunggoro.
 
-**Live Site:** https://haikalalghiffari.github.io/Marvelverse/
+**Live Site:** https://haikalalghiffari.github.io/marvelverse/
 
 ---
 
